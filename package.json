@@ -1,8 +1,13 @@
 {
-  "name": "react_starter",
+  "name": "php_react_starter",
   "version": "1.0.0",
-  "description": "Starting setup for react redux project",
+  "description": "Starting setup for ReactJS ReduxJS project with PHP server",
   "main": "index.js",
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:9000"
+    }
+  },
   "scripts": {
     "start": "node dev_server.js",
     "bundle": "webpack --config webpack.prod.js --progress",
@@ -12,9 +17,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Learning-Fuze/react_starter.git"
+    "url": "https://github.com/Learning-Fuze/react-with-server.git"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
